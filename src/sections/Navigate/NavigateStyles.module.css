@@ -1,0 +1,36 @@
+.navigateContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 170px;
+}
+.navigateList {
+  display: flex;
+  gap: 60px;
+  list-style: none;
+  font-size: 16px;
+}
+.navigateLogo {
+  font-family: "Sora", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  background: linear-gradient(270deg, #dbb2f8 50%, #ffb6c1 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-left: -50px;
+  cursor: pointer;
+}
+.navigateLogo:hover {
+  transform: scale(1.09);
+}
+.navigateConnect {
+  padding: 15px 25px;
+  border-radius: 50px;
+  background: linear-gradient(267deg, #dbb2f8 0.36%, #ffb6c1 102.06%);
+  cursor: pointer;
+  transition: 0.5s;
+}
+.navigateConnect:hover {
+  transform: scale(1.09);
+}
