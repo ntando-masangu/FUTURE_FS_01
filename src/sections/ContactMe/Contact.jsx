@@ -34,7 +34,7 @@ function Contact({ isDarkMode }) {
   return (
     <section id="contact" className={styles.contactContainer}>
       <div className={styles.contactHeading}>
-        <h2 style={{ textAlign: "left" }}>Contact Me.</h2>
+        <h2>Contact Me.</h2>
       </div>
 
       <div className={styles.contactContent}>

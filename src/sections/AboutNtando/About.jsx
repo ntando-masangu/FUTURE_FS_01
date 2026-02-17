@@ -6,7 +6,7 @@ function About() {
     <section id="about">
       <div className={styles.aboutContainer}>
         <div className={styles.aboutHeading}>
-          <h2>About Ntando</h2>
+          <h2>About Ntando.</h2>
         </div>
         <div className={styles.aboutContent}>
           <p>

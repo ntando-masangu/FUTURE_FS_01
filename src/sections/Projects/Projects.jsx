@@ -7,7 +7,7 @@ function Projects() {
     <section id="projects">
       <div className={styles.projectsContainer}>
         <div className={styles.projectsHeading}>
-          <h2>My Latest Work</h2>
+          <h2>My Latest Work.</h2>
         </div>
         <div className={styles.projectSubHeading}>
           <p>Here are some of my recent projects.</p>
