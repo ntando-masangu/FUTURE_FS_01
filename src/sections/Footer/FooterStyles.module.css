@@ -40,3 +40,31 @@
   gap: 20px;
   align-items: center;
 }
+@media (max-width: 768px) {
+  .footerContainer {
+    flex-direction: column; /* stack left and right content */
+    align-items: center;
+    gap: 30px;
+    padding: 30px 20px; /* reduce padding for smaller screens */
+    text-align: center;
+  }
+
+  .footerContentRight,
+  .footerContentLeft {
+    flex-direction: row; /* keep items in a row but smaller */
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .footerContentRight h2 {
+    font-size: 20px; /* scale down the heading */
+  }
+
+  .footerContentRight img,
+  .footerContentLeft img {
+    width: 30px !important;
+    height: 30px !important;
+    margin: 5px;
+  }
+}

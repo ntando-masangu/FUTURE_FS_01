@@ -1,3 +1,6 @@
+/* ==========================
+   DESKTOP STYLES (default)
+========================== */
 .navigateContainer {
   display: flex;
   align-items: center;
@@ -10,8 +13,28 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  backdrop-filter: blur(8px); /* subtle modern blur (optional) */
+  backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
+}
+
+.navigateLogo {
+  font-family: "Sora", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  background: linear-gradient(
+    270deg,
+    var(--secondary-colour) 50%,
+    var(--primary-colour) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.navigateLogo:hover {
+  transform: scale(1.09);
 }
 
 .navigateList {
@@ -20,10 +43,8 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  font-size: 16px;
 }
 
-/* Unified active/hover styles — less repetition */
 .navigateItem {
   position: relative;
   cursor: pointer;
@@ -38,12 +59,10 @@
   padding-bottom: 6px;
 }
 
-/* Active state — strongest specificity */
 .navigateItem.active a {
   color: var(--primary-colour);
 }
 
-/* Underline effect (only on active or hover) */
 .navigateItem::after {
   content: "";
   position: absolute;
@@ -52,6 +71,7 @@
   width: 0;
   height: 2px;
   background: var(--primary-colour);
+  transition: width 0.3s ease;
 }
 
 .navigateItem:hover::after,
@@ -59,34 +79,10 @@
   width: 100%;
 }
 
-/* Hover color change (only if not active) */
 .navigateItem:not(.active):hover a {
   color: var(--primary-colour);
 }
 
-/* Logo */
-.navigateLogo {
-  font-family: "Sora", sans-serif;
-  font-size: 24px;
-  font-weight: bold;
-  background: linear-gradient(
-    270deg,
-    var(--secondary-colour) 50%,
-    var(--primary-colour) 100%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-left: -50px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.navigateLogo:hover {
-  transform: scale(1.09);
-}
-
-/* Connect button */
 .navigateConnect {
   padding: 15px 25px;
   border-radius: 50px;
@@ -105,4 +101,48 @@
 .navigateConnect:hover {
   transform: scale(1.09);
   box-shadow: 0 8px 25px rgba(var(--primary-colour-rgb, 192, 38, 211), 0.3);
+}
+
+/* Hamburger hidden on desktop */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* ==========================
+   MOBILE STYLES
+========================== */
+@media (max-width: 768px) {
+  .navigateContainer {
+    padding: 12px 5%;
+  }
+
+  .navigateList {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 200px;
+    background: var(--card-bg-colour);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  /* Show menu when hamburger clicked */
+  .showMenu {
+    display: flex !important;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  /* Hide Connect button on mobile */
+  .navigateConnect {
+    display: none;
+  }
 }

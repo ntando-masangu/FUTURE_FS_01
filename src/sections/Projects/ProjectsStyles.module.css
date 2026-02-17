@@ -106,3 +106,38 @@
   border: 1px solid rgba(var(--primary-colour-rgb), 0.2);
   text-align: center;
 }
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .projectsContainer {
+    margin: 50px 20px;
+    gap: 20px;
+  }
+
+  .projectsContent {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+
+  .projectCard {
+    padding: 15px;
+    width: 100%; /* full width in the grid column */
+  }
+
+  /* buttons adjust on mobile but stay the same on desktop/bigger screens */
+  .projectBtnGitHub,
+  .projectBtnLiveDemo {
+    width: 48%; /* keep them side by side, nearly half each */
+    margin-right: 0;
+    margin-top: 10px;
+  }
+
+  .projectSubHeading p {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .projectTitle {
+    font-size: 18px;
+    text-align: center;
+  }
+}

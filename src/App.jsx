@@ -10,7 +10,7 @@ import Footer from "./sections/Footer/Footer";
 import { IonIcon } from "@ionic/react";
 import { sunny, moon } from "ionicons/icons";
 
-import styles from "./sections/Hero/HeroStyles.module.css"; // ← correct import
+import styles from "./sections/Hero/HeroStyles.module.css";
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -22,7 +22,7 @@ function App() {
       setIsDarkMode(isDark);
       document.body.classList.toggle("dark-theme", isDark);
     }
-    // Optional: fallback to system preference if no saved theme
+    //fallback to system preference if no saved theme
     else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
       setIsDarkMode(true);
       document.body.classList.add("dark-theme");
@@ -40,7 +40,7 @@ function App() {
   return (
     <>
       <IonIcon
-        className={styles.themeIcon} // ← fixed: use styles.themeIcon
+        className={styles.themeIcon}
         icon={isDarkMode ? moon : sunny}
         onClick={toggleTheme}
       />

@@ -9,7 +9,7 @@ import emailjs from "@emailjs/browser";
 function Contact({ isDarkMode }) {
   // receive from App
   const form = useRef();
-  const [status, setStatus] = useState(""); // "" | "sending" | "success" | "error"
+  const [status, setStatus] = useState("");
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -46,17 +46,14 @@ function Contact({ isDarkMode }) {
           </p>
           <div className={styles.contactDetail}>
             <img
-              src={isDarkMode ? emailIconDark : emailIcon} // dark mode → dark/white icon
+              src={isDarkMode ? emailIconDark : emailIcon} // dark mode -> white icon
               alt="Email icon"
             />
             <p>ntandomasangu@gmail.com</p>
           </div>
 
           <div className={styles.contactDetail}>
-            <img
-              src={isDarkMode ? callIconDark : callIcon} // dark mode → dark/white icon
-              alt="Phone icon"
-            />
+            <img src={isDarkMode ? callIconDark : callIcon} alt="Phone icon" />
             <p>+27 78 195 0319</p>
           </div>
         </div>

@@ -79,3 +79,42 @@
   transform: scale(1.15) rotate(20deg);
   color: var(--secondary-colour);
 }
+@media (max-width: 768px) {
+  .heroContainer {
+    flex-direction: column; /* stack image and info vertically */
+    gap: 20px;
+    margin-top: 100px; /* reduce top margin for smaller screens */
+    align-items: center;
+    text-align: center;
+  }
+
+  .heroImg {
+    width: 60%; /* reduce image size for smaller screens */
+    max-width: 250px;
+  }
+
+  .heroName {
+    font-size: 36px; /* scale down title */
+  }
+
+  .heading {
+    font-size: 20px;
+  }
+
+  .heroAction {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+
+  .heroInfo img {
+    width: 25px !important;
+    height: 25px !important;
+    margin: 5px;
+  }
+
+  .themeIcon {
+    top: 80px;
+    right: 20px;
+    font-size: 30px;
+  }
+}

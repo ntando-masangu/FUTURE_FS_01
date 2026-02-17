@@ -114,3 +114,43 @@
 .contactForm textarea::placeholder {
   color: var(--text-colour);
 }
+
+@media (max-width: 768px) {
+  .contactContainer {
+    margin: 40px 20px; /* smaller side margins for mobile */
+    gap: 20px;
+  }
+
+  .contactContent {
+    flex-direction: column; /* stack left and right content */
+    gap: 30px;
+  }
+
+  .contactContentLeft {
+    padding-right: 0; /* remove extra padding */
+  }
+
+  .contactContentLeft p {
+    max-width: 100%; /* text fills container */
+    line-height: 28px;
+  }
+
+  .contactDetails {
+    gap: 20px;
+  }
+
+  .contactDetail {
+    gap: 15px; /* smaller gaps for mobile */
+  }
+
+  .contactForm input,
+  .contactForm textarea {
+    width: 100%; /* full width form fields */
+    max-width: 100%;
+  }
+
+  .contactFormBtn {
+    width: 100%; /* full width button */
+    padding: 15px 0;
+  }
+}

@@ -4,8 +4,9 @@ import styles from "./NavigateStyles.module.css";
 function Navigate() {
   const [activeSection, setActiveSection] = React.useState("hero");
   {
-    /* State to track the active section for navigation highlighting */
+    /* track the active section for navigation highlighting */
   }
+  const [menuOpen, setMenuOpen] = React.useState(false);
 
   useEffect(() => {
     const sections = document.querySelectorAll("section[id]");
@@ -22,7 +23,7 @@ function Navigate() {
         root: null,
         rootMargin: "-80px 0px -40px 0px",
         threshold: 0.2,
-      } /* Observer options to trigger when 20% of the section is visible, with some margin for earlier detection */,
+      } /* observer options triggers when 20% of the section is visible */,
     );
     sections.forEach((section) => observer.observe(section));
     // Clean up the observer on component unmount
@@ -32,19 +33,29 @@ function Navigate() {
   const handleNavigation = (sectionId) => {
     const section = document.getElementById(sectionId);
     {
-      /* Scroll to the section when a navigation item is clicked */
+      /* scroll to the section when a nav name is clicked */
     }
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
-      setActiveSection(sectionId); // Update active section immediately on click for better UX, even before the observer updates it based on scroll position
+      setActiveSection(sectionId);
     }
   };
 
   return (
     <section id="navigate">
       <nav className={styles.navigateContainer}>
+        <div
+          className={styles.hamburger}
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          {" "}
+          ={" "}
+        </div>
         <div className={styles.navigateLogo}>NM.</div>
-        <ul className={styles.navigateList}>
+        <ul
+          className={`${styles.navigateList} ${menuOpen ? styles.showMenu : ""}`}
+          id={styles.navigateList}
+        >
           <li
             className={`${styles.navigateItem} ${activeSection === "hero" ? styles.active : ""}`}
           >
@@ -52,7 +63,8 @@ function Navigate() {
               href="#hero"
               onClick={(e) => {
                 e.preventDefault();
-                handleNavigation("hero");
+                handleNavigation("hero"); // scroll to the hero section
+                setMenuOpen(false); // close the menu if it was opend
               }}
             >
               Home
@@ -66,6 +78,7 @@ function Navigate() {
               onClick={(e) => {
                 e.preventDefault();
                 handleNavigation("about");
+                setMenuOpen(false);
               }}
             >
               About Ntando
@@ -79,6 +92,7 @@ function Navigate() {
               onClick={(e) => {
                 e.preventDefault();
                 handleNavigation("projects");
+                setMenuOpen(false);
               }}
             >
               Projects
@@ -92,6 +106,7 @@ function Navigate() {
               onClick={(e) => {
                 e.preventDefault();
                 handleNavigation("contact");
+                setMenuOpen(false);
               }}
             >
               Contact Me

@@ -6,7 +6,6 @@
   margin: 80px 170px;
 }
 .aboutHeading {
-  position: relative;
   font-size: 25px;
   font-weight: bold;
   font-family: "Sora", sans-serif;
@@ -29,41 +28,12 @@
   padding: 30px;
   border-radius: 20px;
 }
-.aboutSkillsHeading h2 {
-  font-weight: bold;
-  font-family: "Sora", sans-serif;
-}
-.aboutSkills ul {
-  list-style: circle;
-  padding: 0;
-  margin-left: 30px;
-  margin-bottom: 30px;
-}
-.aboutSkills li {
-  margin-bottom: 10px;
-}
-.aboutSkills h3 {
-  font-weight: bold;
-  font-family: "Sora", sans-serif;
-  margin-bottom: 10px;
-}
-.aboutSkillList {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
 .aboutSkillName {
   display: flex;
   gap: 10px;
   align-items: center;
-  transition: 0.3s;
-}
-.aboutSkillName li {
-  min-width: 170px;
 }
 .aboutSkillName hr {
-  outline: none;
-  border: none;
   width: 50%;
   height: 8px;
   border-radius: 50px;
@@ -72,4 +42,35 @@
     var(--skills-green) 40%,
     var(--skills-red) 80%
   );
+  border: none;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .aboutContainer {
+    margin: 80px auto;
+    padding: 0 20px;
+    max-width: 1100px;
+    gap: 20px;
+  }
+
+  .aboutContent {
+    flex-direction: column; /* stack items vertically */
+    padding: 20px; /* smaller padding for mobile */
+    gap: 20px;
+  }
+
+  .aboutSkillName {
+    flex-direction: column; /* stack skill name + bar vertically */
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .aboutSkillName hr {
+    width: 100%; /* full width bars on mobile */
+  }
+
+  .aboutSkills ul {
+    margin-left: 20px; /* smaller indent on mobile */
+  }
 }
