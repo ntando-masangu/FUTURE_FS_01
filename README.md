@@ -4,6 +4,8 @@ Personal website portfolio built using React.JS, Vite and CSS Modules and Flexbo
 
 # Live Demo
 
+https://ntando-masangu-portfolio.vercel.app/
+
 # Features
 
 - Responsive design that is mobile friendly
