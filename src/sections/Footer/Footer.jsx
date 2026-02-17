@@ -6,25 +6,7 @@ import linkedInIconDark from "../../assets/linkedin-dark.svg";
 import githubIconDark from "../../assets/github-dark.svg";
 import { useState, useEffect } from "react";
 
-function Footer() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
-  {
-    /* State to track dark mode */
-  }
-
-  useEffect(() => {
-    const savedTheme = localStorage.getItem("theme");
-    {
-      /* Check for saved theme in localStorage */
-    }
-    if (savedTheme) {
-      setIsDarkMode(savedTheme === "dark");
-      {
-        /* Set dark mode based on saved theme */
-      }
-    }
-  }, []);
-
+function Footer({ isDarkMode }) {
   const toggleTheme = () => {
     const newTheme = !isDarkMode;
     setIsDarkMode(newTheme);

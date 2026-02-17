@@ -35,18 +35,19 @@
   gap: 30px;
 }
 .projectCard {
-  background-color: var(--card-background);
+  background-color: var(--card-bg-colour);
   border-radius: 10px;
   padding: 20px;
-  width: 33.33%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   height: 100%;
+  width: 33.33%;
 }
 .projectImage {
   width: 100%;
   height: auto;
   border-radius: 5px;
   margin-bottom: 15px;
+  object-fit: cover;
 }
 .projectBtnGitHub {
   border: 2px solid var(--primary-colour);

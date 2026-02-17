@@ -50,7 +50,7 @@ function App() {
       <About />
       <Projects />
       <Contact isDarkMode={isDarkMode} />
-      <Footer />
+      <Footer isDarkMode={isDarkMode} />
     </>
   );
 }
