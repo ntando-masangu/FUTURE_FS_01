@@ -9,6 +9,7 @@ const projects = [
     technologies: ["React.js", "CSS3", "HTML5"],
     image: project1,
     repositoryLink: "https://github.com/ntando-masangu/FUTURE_FS_01: ",
+    liveDemoLink: "https://ntando-masangu-portfolio.vercel.app/",
   },
 ];
 export default projects;
