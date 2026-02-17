@@ -47,3 +47,13 @@ https://ntando-masangu-portfolio.vercel.app/
   EMAIL: ntandomasangu@gmail.com
   LINKEDIN: https://www.linkedin.com/in/ntando-masangu-480298257
   GITHUB: https://github.com/ntando-masangu
+
+  # Images
+
+  <img width="1366" height="768" alt="Screenshot (173)" src="https://github.com/user-attachments/assets/745e31f6-e222-463d-9be3-56abc7234780" />
+<img width="1366" height="768" alt="Screenshot (172)" src="https://github.com/user-attachments/assets/a21cf1a2-b59f-452f-bcd9-6596930130ba" />
+<img width="1366" height="768" alt="Screenshot (171)" src="https://github.com/user-attachments/assets/48010c9f-052e-4213-a1a7-48eee844d47b" />
+<img width="1366" height="768" alt="Screenshot (170)" src="https://github.com/user-attachments/assets/a1890a4b-4d5d-48ce-a0d6-1bb272fd0b12" />
+<img width="1366" height="768" alt="Screenshot (169)" src="https://github.com/user-attachments/assets/e0d1a0b5-0f0b-413e-aa70-8411f8472964" />
+<img width="1366" height="768" alt="Screenshot (174)" src="https://github.com/user-attachments/assets/1487ba4a-736f-4ef7-bfe3-6a863e986b52" />
+
