@@ -1,5 +1,6 @@
 #hero {
   position: relative;
+  z-index: 10;
 }
 .heroContainer {
   display: flex;
@@ -7,7 +8,7 @@
   gap: 35px;
   align-items: center;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 150px;
 }
 .heroImg {
   max-width: 300px;
@@ -18,7 +19,11 @@
   font-size: 48px;
   font-weight: bold;
   font-family: "Sora", sans-serif;
-  background: linear-gradient(270deg, #dbb2f8 50%, #ffb6c1 100%);
+  background: linear-gradient(
+    270deg,
+    var(--secondary-colour) 50%,
+    var(--primary-colour) 100%
+  );
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -31,12 +36,17 @@
 .heroAction {
   padding: 15px 25px;
   border-radius: 50px;
-  background: linear-gradient(267deg, #dbb2f8 0.36%, #ffb6c1 102.06%);
+  background: linear-gradient(
+    267deg,
+    var(--secondary-colour) 0.36%,
+    var(--primary-colour) 102.06%
+  );
   cursor: pointer;
   font-family: "JetBrains Mono", monospace;
   margin-top: 15px;
   border: none;
   transition: 0.5s;
+  color: var(--text-colour);
 }
 .heroAction:hover {
   transform: scale(1.09);
@@ -56,10 +66,16 @@
   transform: scale(1.09);
 }
 .themeIcon {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 40px;
-  height: 40px;
+  position: fixed;
+  top: 18px; /* tweak to align nicely under/around navbar height */
+  right: 30px; /* give space from right edge */
+  z-index: 1100; /* higher than navbar's 1000 */
+  font-size: 36px; /* or 40px — your preference */
   cursor: pointer;
+  color: var(--primary-colour);
+}
+
+.themeIcon:hover {
+  transform: scale(1.15) rotate(20deg);
+  color: var(--secondary-colour);
 }

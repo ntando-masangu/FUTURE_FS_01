@@ -1,23 +1,19 @@
 import styles from "./HeroStyles.module.css";
 import heroImage from "../../assets/hero-image.png";
-import themeIcon from "../../assets/sun.svg";
 import linkedInIcon from "../../assets/linkedin-light.svg";
 import githubIcon from "../../assets/github-light.svg";
 import linkedInIconDark from "../../assets/linkedin-dark.svg";
 import githubIconDark from "../../assets/github-dark.svg";
-import CV from "../../assets/cv.pdf";
+import CV from "../../assets/NtandoMasangu_CV.pdf";
+import { IonIcon } from "@ionic/react";
+import { sunny, moon } from "ionicons/icons";
 
 {
   /* Hero component */
 }
-function Hero() {
+function Hero({ isDarkMode }) {
   return (
     <section id="hero">
-      <img
-        className={styles.themeIcon}
-        src={themeIcon}
-        alt="Colour mode icon"
-      />
       <div className={styles.heroContainer}>
         <img
           className={styles.heroImg}
@@ -33,10 +29,16 @@ function Hero() {
               href="https://www.linkedin.com/in/ntando-masangu-9b1a4b1b3/"
               target="_blank"
             >
-              <img src={linkedInIcon} alt="LinkedIn icon" />
+              <img
+                src={isDarkMode ? linkedInIconDark : linkedInIcon}
+                alt="LinkedIn icon"
+              />
             </a>
             <a href="https://github.com/ntando-masangu" target="_blank">
-              <img src={githubIcon} alt="GitHub icon" />
+              <img
+                src={isDarkMode ? githubIconDark : githubIcon}
+                alt="GitHub icon"
+              />
             </a>
           </span>
           <p>

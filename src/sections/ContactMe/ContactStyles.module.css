@@ -1,7 +1,6 @@
 .contactContainer {
   display: flex;
   flex-direction: column;
-
   justify-content: center;
   gap: 20px;
   margin: 50px 170px;
@@ -10,7 +9,11 @@
   font-size: 25px;
   font-weight: bold;
   font-family: "Sora", sans-serif;
-  background: linear-gradient(280deg, #dbb2f8 50%, #ffb6c1 100%);
+  background: linear-gradient(
+    280deg,
+    var(--secondary-colour) 50%,
+    var(--primary-colour) 100%
+  );
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -75,28 +78,39 @@
   padding-left: 10px;
   border-radius: 20px;
   border: none;
-  background: rgb(255, 182, 193, 0.5);
+  background: var(--card-bg-colour);
   font-family: "JetBrains Mono", monospace;
+  color: --var(--text-colour);
 }
 .contactForm textarea {
   padding-left: 10px;
   padding-top: 10px;
   border-radius: 20px;
   border: none;
-  background: rgb(255, 182, 193, 0.5);
+  background: var(--card-bg-colour);
   width: 400px;
   height: 150px;
   font-family: "JetBrains Mono", monospace;
+  color: var(--text-colour);
 }
 .contactFormBtn {
   padding: 15px 30px;
   border-radius: 50px;
-  background: linear-gradient(267deg, #dbb2f8 0.36%, #ffb6c1 102.06%);
+  background: linear-gradient(
+    267deg,
+    var(--secondary-colour) 0.36%,
+    var(--primary-colour) 102.06%
+  );
   cursor: pointer;
   font-family: "JetBrains Mono", monospace;
   border: none;
   transition: 0.5s;
+  color: var(--text-colour);
 }
 .contactFormBtn:hover {
   transform: scale(1.09);
+}
+.contactForm input::placeholder,
+.contactForm textarea::placeholder {
+  color: var(--text-colour);
 }

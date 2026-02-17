@@ -4,8 +4,38 @@ import linkedInIcon from "../../assets/linkedin-light.svg";
 import githubIcon from "../../assets/github-light.svg";
 import linkedInIconDark from "../../assets/linkedin-dark.svg";
 import githubIconDark from "../../assets/github-dark.svg";
+import { useState, useEffect } from "react";
 
 function Footer() {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+  {
+    /* State to track dark mode */
+  }
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme");
+    {
+      /* Check for saved theme in localStorage */
+    }
+    if (savedTheme) {
+      setIsDarkMode(savedTheme === "dark");
+      {
+        /* Set dark mode based on saved theme */
+      }
+    }
+  }, []);
+
+  const toggleTheme = () => {
+    const newTheme = !isDarkMode;
+    setIsDarkMode(newTheme);
+    if (newTheme) {
+      document.body.classList.add("dark-theme");
+      localStorage.setItem("theme", "dark");
+    } else {
+      document.body.classList.remove("dark-theme");
+      localStorage.setItem("theme", "light");
+    }
+  };
   return (
     <section id="footer">
       <hr styles={{ margin: "50px 170px" }} />
@@ -17,10 +47,16 @@ function Footer() {
               href="https://www.linkedin.com/in/ntando-masangu-9b1a4b1b3/"
               target="_blank"
             >
-              <img src={linkedInIcon} alt="LinkedIn icon" />
+              <img
+                src={isDarkMode ? linkedInIconDark : linkedInIcon}
+                alt="LinkedIn icon"
+              />
             </a>
             <a href="https://github.com/ntando-masangu" target="_blank">
-              <img src={githubIcon} alt="GitHub icon" />
+              <img
+                src={isDarkMode ? githubIconDark : githubIcon}
+                alt="GitHub icon"
+              />
             </a>
           </span>
         </div>

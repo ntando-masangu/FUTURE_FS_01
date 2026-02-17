@@ -14,7 +14,11 @@
 .footerContentRight h2 {
   font-weight: bold;
   font-family: "Sora", sans-serif;
-  background: linear-gradient(270deg, #dbb2f8 50%, #ffb6c1 100%);
+  background: linear-gradient(
+    270deg,
+    var(--secondary-colour) 50%,
+    var(--primary-colour) 100%
+  );
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
