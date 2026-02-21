@@ -52,7 +52,7 @@ function Projects() {
                   Source Code
                 </button>
 
-                {/* Optional: add tech tags, links, etc. */}
+                {/* tech tags, links, etc. */}
                 {proj.tags && (
                   <div className={styles.tags}>
                     {proj.tags.map((tag, i) => (

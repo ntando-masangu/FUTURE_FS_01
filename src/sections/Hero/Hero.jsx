@@ -26,7 +26,7 @@ function Hero({ isDarkMode }) {
           <h2>Novice Frontend Developer</h2>
           <span>
             <a
-              href="https://www.linkedin.com/in/ntando-masangu-9b1a4b1b3/"
+              href="https://www.linkedin.com/in/ntando-masangu-480298257/"
               target="_blank"
             >
               <img
